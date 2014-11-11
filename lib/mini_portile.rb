@@ -63,7 +63,7 @@ class MiniPortile
     digest   = Digest::MD5.hexdigest(computed_options)
     File.open(md5_file, "w") { |f| f.write digest }
 
-    execute('configure', %Q(sh configure #{computed_options}))
+    execute('configure', %Q(./configure #{computed_options}))
   end
 
   def compile
